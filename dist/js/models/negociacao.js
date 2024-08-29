@@ -11,4 +11,23 @@ export class Negociacao {
         this.#quantidade = quantidade;
         this.#valor = valor;
     }
+
+    // Criando um getter para o atributo data. Há a necessidade, pois o atributo é privado e é necessário obter o seu valor.
+    get data() {
+        return this.#data;
+    }
+
+    // Criando um getter para o atributo quantidade
+    get quantidade() {
+        return this.#quantidade;
+    }
+
+    // Criando um getter para o atributo valor
+    get valor() {
+        return this.#valor;
+    }
+
+    get volume() {
+        return this.#quantidade * this.#valor;
+    }
 }
